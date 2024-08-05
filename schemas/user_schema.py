@@ -1,4 +1,6 @@
+from typing import List
 from pydantic import BaseModel, EmailStr
+from models.model_user import User
 
 
 class UserBase(BaseModel):
@@ -15,4 +17,3 @@ class OutputLogin(BaseModel):
 class InputLogin(BaseModel):
     email: str
     password: str
-

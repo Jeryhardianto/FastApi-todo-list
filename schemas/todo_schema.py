@@ -27,7 +27,7 @@ class TodoUpdate(BaseModel):
     description: str
     status: IsDone
 
-class TodoIsDone(Todo):
+class TodoIsDone(BaseModel):
     status: IsDone
 
 

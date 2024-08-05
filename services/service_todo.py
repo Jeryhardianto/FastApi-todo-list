@@ -47,7 +47,7 @@ class ServiceTodo:
         todo = self.repository_todo.get_by_id(id, current_user.id)
         if todo is None:
             raise HTTPException(status_code=404, detail="Todo not found")
-        # ceate todo to dict
+        # create todo to dict
         todo = TodoSchema.from_orm(todo).dict()
         return Response(message="Todo found", data=todo)
     
